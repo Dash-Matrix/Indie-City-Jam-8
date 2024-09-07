@@ -11,10 +11,14 @@ public class Manager : MonoBehaviour
     public Transform placementPoint;
 
 
-    private void Start()
-    { 
-      
 
+
+    private void Start()
+    {
+
+        SFXManager.instance.StartGamePlayThemeMusic();
+        Timer timer = GameObject.Find("Timer BG").GetComponent<Timer>();
+        timer.StartTimer(50);
     }
     void Update()
     {
@@ -22,7 +26,8 @@ public class Manager : MonoBehaviour
         if(!holding)
         {
             int randomIndex = Random.Range(0, gameObjects.Count);
-
+            Debug.Log("hi");
+            SFXManager.instance.SpawnSound();
             GameObject temp = Instantiate(gameObjects[randomIndex], placementPoint.transform.position, Quaternion.identity);
             holding = true;
         }

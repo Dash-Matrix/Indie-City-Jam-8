@@ -16,6 +16,7 @@ public class ShelveItem : MonoBehaviour
                 string baseName = playerScript.currentHolding.name.Replace("(Clone)", "").Trim();
                 if (baseName.Equals(this.name))
                 {
+                    SFXManager.instance.DropSound();
                     Manager.holding = false;
                 }
             }

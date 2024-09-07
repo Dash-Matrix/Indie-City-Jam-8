@@ -25,12 +25,15 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
         if (movement.magnitude > 0)
         {
+            SFXManager.instance.StartPlayerWalkSound();
             rb.velocity = movement.normalized * moveSpeed;
         }
         else
         {
+            SFXManager.instance.StopPlayerWalkSound();
             rb.velocity = rb.velocity * friction;
         }
     }
