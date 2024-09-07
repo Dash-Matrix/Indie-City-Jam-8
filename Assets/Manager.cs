@@ -5,11 +5,17 @@ using UnityEngine;
 public class Manager : MonoBehaviour
 {
     public List<GameObject> gameObjects;
+    public GameObject[] shelveItems = new GameObject[10];
     public static bool isDelievered = false;
     public static bool holding = false;
     public Transform placementPoint;
 
 
+    private void Start()
+    { 
+      
+
+    }
     void Update()
     {
 
@@ -17,8 +23,7 @@ public class Manager : MonoBehaviour
         {
             int randomIndex = Random.Range(0, gameObjects.Count);
 
-            Instantiate(gameObjects[randomIndex], placementPoint.transform.position, Quaternion.identity);
-
+            GameObject temp = Instantiate(gameObjects[randomIndex], placementPoint.transform.position, Quaternion.identity);
             holding = true;
         }
         // Example: Remove objects from the list or perform operations with them

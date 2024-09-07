@@ -5,17 +5,6 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
 
@@ -25,8 +14,9 @@ public class Item : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerMovement playerScript = collision.gameObject.GetComponent<PlayerMovement>();
-            Debug.Log("inside");
             playerScript.currentHolding = this.gameObject;
+            transform.position += new Vector3(40f, 0f,0f);
+
         }
     }
 
