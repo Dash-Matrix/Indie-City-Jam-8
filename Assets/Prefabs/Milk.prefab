@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 830267960694833948}
   - component: {fileID: 6608296228233077045}
+  - component: {fileID: -2596130029456166666}
   m_Layer: 0
   m_Name: Milk
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2596130029456166666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779776119938288233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077b06f962c863542bb70c88418c9a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
