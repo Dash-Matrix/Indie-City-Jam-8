@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
 
     private float timeRemaining;
-    private bool isRunning;
+    [HideInInspector] public bool isRunning;
 
     private void Start()
     {
@@ -73,6 +73,8 @@ public class Timer : MonoBehaviour
         }
         timerText.text = "Time's Up!";
 
-        // Calls Win Condition
+        // Calls lose Condition
+
+        GameManager.instance.Lose();
     }
 }
